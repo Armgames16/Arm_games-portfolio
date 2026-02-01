@@ -209,21 +209,46 @@
 
         footer { padding: 40px; text-align: center; color: var(--info-text); }
 
-        /* Mobile Ուղղումներ */
+        /* --- MOBILE REPAIRS (Ուղղումներ հեռախոսի համար) --- */
         @media (max-width: 768px) {
+            .hobby-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 30px 0;
+            }
+
             .hover-img {
                 position: static;
-                display: block;
-                width: 150px;
-                margin: 15px auto;
                 opacity: 1;
                 visibility: visible;
+                width: 200px;
+                margin-bottom: 15px;
                 transform: none !important;
             }
-            .hobby-item { display: block; margin: 20px 0; }
-            .glass-card { padding: 30px 20px; }
-            nav { width: 90%; justify-content: space-around; padding: 10px 5px; }
-            nav a { margin: 0 5px; font-size: 0.65rem; }
+
+            .img-left, .img-right {
+                right: auto;
+                left: auto;
+            }
+
+            .glass-card {
+                padding: 30px 20px;
+                width: 90%;
+            }
+
+            nav {
+                width: 95%;
+                padding: 8px 10px;
+                top: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 0.6rem;
+            }
+
+            h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -264,13 +289,13 @@
         <p style="color: var(--info-text); margin-bottom: 40px;">Բացահայտիր իմ նախասիրությունները:</p>
 
         <div class="hobby-item">
-            <img src="Noah.png" class="hover-img img-left" alt="Ֆուտբոլ">
+            <img src="Noah.png" class="hover-img" alt="Ֆուտբոլ">
             <a href="#football-info" class="hobby-btn">⚽ ՖՈՒՏԲՈԼ</a>
         </div>
 
         <div class="hobby-item">
+            <img src="Mootq.IT.png" class="hover-img" alt="Ծրագրավորում">
             <a href="#coding-info" class="hobby-btn">💻 Ծրագրավորում</a>
-            <img src="Mootq.IT.png" class="hover-img img-right" alt="Ծրագրավորում">
         </div>
     </div>
 </section>
