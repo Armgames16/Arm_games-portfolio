@@ -52,11 +52,11 @@
 
         nav {
             position: fixed;
-            top: 25px; left: 50%;
+            top: 15px; left: 50%;
             transform: translateX(-50%);
             background: var(--nav-bg);
             backdrop-filter: blur(20px);
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 100px;
             border: 1px solid rgba(125, 125, 125, 0.2);
             z-index: 1000;
@@ -67,8 +67,8 @@
         nav a {
             color: var(--info-text);
             text-decoration: none;
-            margin: 0 12px;
-            font-size: 0.75rem;
+            margin: 0 10px;
+            font-size: 0.7rem;
             font-weight: 700;
             transition: 0.3s;
             text-transform: uppercase;
@@ -82,21 +82,22 @@
             border: none;
             color: #fff;
             cursor: pointer;
-            width: 35px; height: 35px;
+            width: 30px; height: 30px;
             border-radius: 50%;
-            margin-left: 10px;
+            margin-left: 8px;
             display: flex; align-items: center; justify-content: center;
         }
 
         section {
-            min-height: 100vh;
             display: flex; align-items: center; justify-content: center;
-            padding: 100px 20px;
-            scroll-margin-top: 80px;
+            padding: 50px 20px; /* Կրճատված է 100px-ից */
+            scroll-margin-top: 70px;
         }
 
+        #home { min-height: 80vh; } /* Միայն գլխավորն է մնում մեծ */
+
         .profile-img {
-            width: 220px; height: 220px;
+            width: 180px; height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--accent);
@@ -106,13 +107,13 @@
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-10px); }
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 800;
-            margin: 15px 0;
+            margin: 10px 0;
             background: linear-gradient(45deg, var(--text-color) 30%, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -122,9 +123,9 @@
             background: var(--card-bg);
             border: 1px solid rgba(125, 125, 125, 0.1);
             backdrop-filter: blur(25px);
-            padding: 50px;
-            border-radius: 40px;
-            max-width: 850px;
+            padding: 35px; /* Փոքրացված 50px-ից */
+            border-radius: 30px;
+            max-width: 800px;
             width: 100%;
             box-shadow: 0 20px 50px rgba(0,0,0,0.05);
             position: relative;
@@ -133,13 +134,13 @@
         .hobby-item {
             position: relative;
             display: inline-block;
-            margin: 20px 40px;
+            margin: 15px 25px;
         }
 
         .hover-img {
             position: absolute;
             top: 50%;
-            width: 180px;
+            width: 150px;
             height: auto;
             border-radius: 15px;
             border: 3px solid var(--accent);
@@ -150,105 +151,65 @@
             pointer-events: none;
         }
 
-        .img-left {
-            right: 110%;
-            transform: translateY(-50%) translateX(-20px) scale(0.8);
-        }
-
-        .img-right {
-            left: 110%;
-            transform: translateY(-50%) translateX(20px) scale(0.8);
-        }
+        .img-left { right: 110%; transform: translateY(-50%) translateX(-20px) scale(0.8); }
+        .img-right { left: 110%; transform: translateY(-50%) translateX(20px) scale(0.8); }
 
         .hobby-item:hover .hover-img {
             opacity: 1;
             visibility: visible;
         }
 
-        .hobby-item:hover .img-left { transform: translateY(-50%) translateX(0) scale(1); }
-        .hobby-item:hover .img-right { transform: translateY(-50%) translateX(0) scale(1); }
+        .hobby-item:hover .img-left, .hobby-item:hover .img-right { transform: translateY(-50%) translateX(0) scale(1); }
 
         .hobby-btn {
-            padding: 18px 35px;
-            border-radius: 20px;
+            padding: 15px 30px;
+            border-radius: 15px;
             background: var(--accent);
             color: #fff;
             text-decoration: none;
             font-weight: 800;
             display: inline-block;
             transition: 0.4s;
+            font-size: 0.9rem;
         }
 
         .info-box {
-            font-size: 1.2rem; color: var(--info-text);
-            line-height: 1.9; border-left: 5px solid var(--accent);
-            padding-left: 25px;
+            font-size: 1.1rem; color: var(--info-text);
+            line-height: 1.7; border-left: 4px solid var(--accent);
+            padding-left: 20px;
         }
 
         .skill-badge {
             background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent);
-            padding: 10px 22px; border-radius: 100px; margin: 8px;
-            display: inline-block; font-weight: 600;
+            padding: 8px 18px; border-radius: 100px; margin: 5px;
+            display: inline-block; font-weight: 600; font-size: 0.85rem;
         }
 
         .social-icon {
-            width: 60px; height: 60px; background: var(--card-bg);
-            border-radius: 20px; display: flex; align-items: center; justify-content: center;
-            color: var(--accent); font-size: 1.5rem; transition: 0.4s;
+            width: 50px; height: 50px; background: var(--card-bg);
+            border-radius: 15px; display: flex; align-items: center; justify-content: center;
+            color: var(--accent); font-size: 1.3rem; transition: 0.4s;
             border: 1px solid rgba(125, 125, 125, 0.2); text-decoration: none;
         }
 
         .social-icon:hover { background: var(--accent); color: #fff; transform: translateY(-5px); }
 
         .back-to-top {
-            position: fixed; bottom: 40px; right: 40px;
-            background: var(--accent); color: #fff; width: 50px; height: 50px;
-            border-radius: 15px; display: flex; align-items: center; justify-content: center;
-            z-index: 1000; text-decoration: none;
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--accent); color: #fff; width: 45px; height: 45px;
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            z-index: 1000; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        footer { padding: 40px; text-align: center; color: var(--info-text); }
+        footer { padding: 30px; text-align: center; color: var(--info-text); font-size: 0.9rem; }
 
-        /* --- MOBILE REPAIRS (Ուղղումներ հեռախոսի համար) --- */
         @media (max-width: 768px) {
-            .hobby-item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 30px 0;
-            }
-
-            .hover-img {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                width: 200px;
-                margin-bottom: 15px;
-                transform: none !important;
-            }
-
-            .img-left, .img-right {
-                right: auto;
-                left: auto;
-            }
-
-            .glass-card {
-                padding: 30px 20px;
-                width: 90%;
-            }
-
-            nav {
-                width: 95%;
-                padding: 8px 10px;
-                top: 15px;
-            }
-
-            nav a {
-                margin: 0 5px;
-                font-size: 0.6rem;
-            }
-
-            h1 { font-size: 2.5rem; }
+            section { padding: 40px 15px; }
+            .hobby-item { display: flex; flex-direction: column; align-items: center; margin: 20px 0; }
+            .hover-img { position: static; opacity: 1; visibility: visible; width: 160px; margin-bottom: 10px; transform: none !important; }
+            .glass-card { padding: 25px 15px; width: 95%; }
+            nav { width: 90%; top: 10px; }
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -267,16 +228,16 @@
 <section id="home">
     <div style="text-align: center;" data-aos="zoom-in">
         <img src="My-photo.jpg" alt="Արման Գոմցյան" class="profile-img">
-        <p style="letter-spacing: 5px; color: var(--accent); font-weight: 800; margin-top: 35px;">ՈՂՋՈՒՅՆ</p>
+        <p style="letter-spacing: 3px; color: var(--accent); font-weight: 800; margin-top: 25px; font-size: 0.8rem;">ՈՂՋՈՒՅՆ</p>
         <h1>Արման Գոմցյան</h1>
-        <div style="height: 3px; width: 60px; background: var(--accent); margin: 20px auto; border-radius: 10px;"></div>
-        <p style="color: var(--info-text); font-weight: 600; letter-spacing: 2px;">FUTURE DEVELOPER</p>
+        <div style="height: 3px; width: 50px; background: var(--accent); margin: 15px auto; border-radius: 10px;"></div>
+        <p style="color: var(--info-text); font-weight: 600; letter-spacing: 2px; font-size: 0.9rem;">FUTURE DEVELOPER</p>
     </div>
 </section>
 
 <section id="about">
     <div class="glass-card" data-aos="fade-up">
-        <h2 style="color: var(--accent); font-size: 2rem; margin-bottom: 30px;">Կենսագրություն</h2>
+        <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">Կենսագրություն</h2>
         <div class="info-box">
             Ես Արման Գոմցյանն եմ։ Ծնվել եմ 2013 թվականի Մայիսի 15-ին։ Սովորում եմ Մ․Ա․Ս․Է․ Էօրնեկեան հանրակրթական դպրոցի 7-րդ Ա դասարանում։
         </div>
@@ -285,16 +246,16 @@
 
 <section id="hobbies">
     <div class="glass-card" style="text-align: center;" data-aos="fade-right">
-        <h2 style="font-size: 2rem;">Իմ հոբիները</h2>
-        <p style="color: var(--info-text); margin-bottom: 40px;">Բացահայտիր իմ նախասիրությունները:</p>
+        <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Իմ հոբիները</h2>
+        <p style="color: var(--info-text); margin-bottom: 30px;">Բացահայտիր իմ նախասիրությունները:</p>
 
         <div class="hobby-item">
-            <img src="Noah.png" class="hover-img" alt="Ֆուտբոլ">
+            <img src="Noah.png" class="hover-img img-left" alt="Ֆուտբոլ">
             <a href="#football-info" class="hobby-btn">⚽ ՖՈՒՏԲՈԼ</a>
         </div>
 
         <div class="hobby-item">
-            <img src="Mootq.IT.png" class="hover-img" alt="Ծրագրավորում">
+            <img src="Mootq.IT.png" class="hover-img img-right" alt="Ծրագրավորում">
             <a href="#coding-info" class="hobby-btn">💻 Ծրագրավորում</a>
         </div>
     </div>
@@ -302,7 +263,7 @@
 
 <section id="football-info">
     <div class="glass-card" data-aos="fade-left">
-        <h2 style="color: var(--accent); font-size: 2rem;">⚽ Ֆուտբոլ</h2>
+        <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">⚽ Ֆուտբոլ</h2>
         <div class="info-box">
             Ես ֆուտբոլի գնում եմ 2023 թվականի սեպտեմբերից։ Սկզբում խաղում էի աջ եզրում, բայց 2024 թվականից դարձել եմ դարպասապահ։
         </div>
@@ -311,11 +272,11 @@
 
 <section id="coding-info">
     <div class="glass-card" data-aos="fade-up">
-        <h2 style="color: var(--accent); font-size: 2rem; text-align: center;">💻 Ծրագրավորում</h2>
+        <h2 style="color: var(--accent); font-size: 1.8rem; text-align: center; margin-bottom: 20px;">💻 Ծրագրավորում</h2>
         <div class="info-box">
             Սովորում եմ Mootq IT դպրոցում 2025 թվականի հուլիսից։ Ներքևում կարող եք տեսնել իմ հմտությունները։
         </div>
-        <div style="margin-top: 40px; text-align: center;">
+        <div style="margin-top: 30px; text-align: center;">
             <span class="skill-badge">HTML / CSS</span>
             <span class="skill-badge">Python</span>
             <span class="skill-badge">Scratch</span>
@@ -326,10 +287,10 @@
 
 <section id="contact">
     <div class="glass-card" style="text-align: center;" data-aos="flip-up">
-        <h2 style="color: var(--accent); font-size: 2rem;">Կապ իմ հետ</h2>
-        <p><i class="fas fa-envelope" style="color: var(--accent)"></i> arman.gomcyan21@gmail.com</p>
-        <p><i class="fas fa-phone" style="color: var(--accent)"></i> +374 55 76 00 94</p>
-        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+        <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">Կապ իմ հետ</h2>
+        <p style="margin: 10px 0;"><i class="fas fa-envelope" style="color: var(--accent)"></i> arman.gomcyan21@gmail.com</p>
+        <p style="margin: 10px 0;"><i class="fas fa-phone" style="color: var(--accent)"></i> +374 55 76 00 94</p>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px;">
             <a href="https://www.instagram.com/arm_games16" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@arman.pro9916" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
@@ -344,7 +305,7 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 800, once: true });
     const modeToggle = document.getElementById('mode-toggle');
     const icon = modeToggle.querySelector('i');
     modeToggle.addEventListener('click', () => {
