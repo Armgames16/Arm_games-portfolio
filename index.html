@@ -86,6 +86,7 @@
             border-radius: 50%;
             margin-left: 8px;
             display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
         }
 
         section {
@@ -208,8 +209,10 @@
             .hobby-item { display: flex; flex-direction: column; align-items: center; margin: 20px 0; }
             .hover-img { position: static; opacity: 1; visibility: visible; width: 160px; margin-bottom: 10px; transform: none !important; }
             .glass-card { padding: 25px 15px; width: 95%; }
-            nav { width: 90%; top: 10px; }
+            nav { width: 90%; top: 10px; justify-content: space-between; padding: 5px 15px; }
+            nav a { margin: 0 5px; font-size: 0.6rem; }
             h1 { font-size: 2.2rem; }
+            .back-to-top { display: flex !important; bottom: 20px; right: 20px; }
         }
     </style>
 </head>
@@ -289,9 +292,9 @@
     <div class="glass-card" style="text-align: center;" data-aos="flip-up">
         <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">Կապ իմ հետ</h2>
 
-        <a href="mailto:arman.gomcyan21@gmail.com?subject=" class="hobby-btn" style="margin-bottom: 25px;">
-    <i class="fas fa-envelope"></i> ՈՒՂԱՐԿԵԼ GMAIL-ՈՎ
-</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arman.gomcyan21@gmail.com" target="_blank" class="hobby-btn" style="margin-bottom: 25px;">
+            <i class="fas fa-envelope"></i> ՈՒՂԱՐԿԵԼ GMAIL-ՈՎ
+        </a>
 
         <p style="margin: 10px 0;"><i class="fas fa-phone" style="color: var(--accent)"></i> +374 55 76 00 94</p>
 
@@ -322,4 +325,3 @@
 
 </body>
 </html>
-
